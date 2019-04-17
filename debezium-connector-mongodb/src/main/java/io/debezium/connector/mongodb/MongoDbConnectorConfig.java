@@ -128,6 +128,14 @@ public class MongoDbConnectorConfig extends CommonConnectorConfig {
                                               .withImportance(Importance.HIGH)
                                               .withDescription("Password to be used when connecting to MongoDB, if necessary.");
 
+    public static final Field SOURCE = Field.create("mongodb.source")
+								            .withDisplayName("Source")
+								            .withType(Type.STRING)
+								            .withWidth(Width.SHORT)
+								            .withImportance(Importance.MEDIUM)
+								            .withDefault("admin")
+								            .withDescription("Database name where user is defined, if necessary");
+
     public static final Field POLL_INTERVAL_SEC = Field.create("mongodb.poll.interval.sec")
                                                        .withDisplayName("Replica membership poll interval (sec)")
                                                        .withType(Type.INT)
